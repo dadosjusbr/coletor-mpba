@@ -5,7 +5,7 @@ def captura(mes, ano):
     metadado = Coleta.Metadados()
     metadado.nao_requer_login = True
     metadado.nao_requer_captcha = True
-    metadado.acesso = Coleta.Metadados.FormaDeAcesso.AMIGAVEL_PARA_RASPAGEM
+    metadado.acesso = Coleta.Metadados.FormaDeAcesso.RASPAGEM_DIFICULTADA
     metadado.extensao = Coleta.Metadados.Extensao.ODS
     metadado.estritamente_tabular = False
     """

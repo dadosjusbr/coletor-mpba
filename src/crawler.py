@@ -22,10 +22,24 @@ cod_meses = {
 cod_meses_indenizatorias_2019 = {
     "07": "_1",
     "08": "_2",
-    "09": "_3",
-    "10": "_4",
-    "11": "_5",
-    "12": "_6",
+    "09": "",
+    "10": "_0",
+    "11": "_3",
+    "12": "_4",
+}
+cod_meses_indenizatorias_2020 = {
+    "01": "",
+    "02": "_0",
+    "03": "_1",
+    "04": "_2",
+    "05": "_3",
+    "06": "_4",
+    "07": "_5",
+    "08": "_6",
+    "09": "_7",
+    "10": "_8",
+    "11": "",
+    "12": "_0",
 }
 # Generate endpoints able to download
 
@@ -65,16 +79,16 @@ def links_perks_temporary_funds(month, year):
 
             links_type["Membros ativos"] = link
 
-    else:
+    elif int(year) == 2020:
         for key in cod_meses:
             if key == str(month):
-                if key == "01":
+                if key in ["11", "12"]:
                     link = (
                         base_url
                         + "verbas-indenizatorias-temporarias/"
                         + year
-                        + "/verbas_indenizatorias"
-                        + cod_meses[key]
+                        + "/verbas_indenizatoria"
+                        + cod_meses_indenizatorias_2020[key]
                         + ".ods"
                     )
                 else:
@@ -82,12 +96,26 @@ def links_perks_temporary_funds(month, year):
                         base_url
                         + "verbas-indenizatorias-temporarias/"
                         + year
-                        + "/verbas_indenizatoria"
-                        + cod_meses[key]
+                        + "/verbas_indenizatorias"
+                        + cod_meses_indenizatorias_2020[key]
                         + ".ods"
                     )
 
                 links_type["Membros ativos"] = link
+    else:
+        for key in cod_meses:
+            if key == str(month):
+                link = (
+                    base_url
+                    + "verbas-indenizatorias-temporarias/"
+                    + year
+                    + "/verbas_indenizatoria"
+                    + cod_meses_indenizatorias_2019[key]
+                    + ".ods"
+                )
+
+            links_type["Membros ativos"] = link
+
     return links_type
 
 
