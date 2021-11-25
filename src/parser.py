@@ -5,7 +5,7 @@ import os
 from coleta import coleta_pb2 as Coleta
 
 CONTRACHEQUE_ATE_JUNHO_2019 = "contracheque"
-CONTRACHEQUE_DEPOIS_JUNHO_2019 = "contracheque"
+CONTRACHEQUE_DEPOIS_JUNHO_2019 = "contracheque1"
 INDENIZACOES = "indenizações"
 
 HEADERS = {
@@ -82,7 +82,10 @@ def cria_remuneracao(row, categoria):
         key, value = items[i][0], items[i][1]
         remuneracao = Coleta.Remuneracao()
         remuneracao.natureza = Coleta.Remuneracao.Natureza.Value("R")
-        remuneracao.categoria = categoria
+        if categoria == INDENIZACOES:
+            remuneracao.categoria = categoria
+        else:
+            remuneracao.categoria = "contracheque"
         remuneracao.item = key
         remuneracao.valor = float(format_value(row[value]))
         remuneracao.tipo_receita = Coleta.Remuneracao.TipoReceita.Value("O")
