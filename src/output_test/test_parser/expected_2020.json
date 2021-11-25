@@ -45,17 +45,16 @@
                         "tipoReceita": "O"
                     },
                     {
-                        "natureza": "D",
                         "categoria": "contracheque",
                         "item": "Verbas indenizatórias",
-                        "valor": -1300.0,
+                        "valor": 1300.0,
                         "tipoReceita": "O"
                     },
                     {
                         "natureza": "D",
                         "categoria": "contracheque",
                         "item": "Contribuição Previdenciária",
-                        "valor": 4964.71,
+                        "valor": -4964.71,
                         "tipoReceita": "O"
                     },
                     {
