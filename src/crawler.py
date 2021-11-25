@@ -41,6 +41,17 @@ cod_meses_indenizatorias_2020 = {
     "11": "",
     "12": "_0",
 }
+cod_meses_indenizatorias_2021 = {
+    "01": "",
+    "02": "_0",
+    "03": "_1",
+    "04": "_2",
+    "05": "_3",
+    "06": "_4",
+    "07": "_5",
+    "08": "_6",
+    "09": "_7",
+}
 # Generate endpoints able to download
 
 
@@ -110,7 +121,7 @@ def links_perks_temporary_funds(month, year):
                     + "verbas-indenizatorias-temporarias/"
                     + year
                     + "/verbas_indenizatoria"
-                    + cod_meses_indenizatorias_2019[key]
+                    + cod_meses_indenizatorias_2021[key]
                     + ".ods"
                 )
 
