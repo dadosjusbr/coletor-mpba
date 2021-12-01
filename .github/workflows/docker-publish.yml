@@ -34,13 +34,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Running data tests
-      - name: Data test
-        run: sudo python3 ../../src/data_test.py
-
-      # Running parser tests
-      - name: Parser test
-        run: sudo python3 ../../src/parser_test.py
+      # Running all tests
+      - name: Running tests
+        run: sudo python3 -m unittest discover -s ../../src -p '*_test.py'
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
