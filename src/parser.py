@@ -1,5 +1,4 @@
 # coding: utf8
-import pandas as pd
 import sys
 import os
 from coleta import coleta_pb2 as Coleta
