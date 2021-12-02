@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Run requirements
-        run: pip install -r requirements.txt
+        run: pip3 install -r requirements.txt
 
       # Running all tests
       - name: Running tests
