@@ -51,6 +51,9 @@ cod_meses_indenizatorias_2021 = {
     "07": "_5",
     "08": "_6",
     "09": "_7",
+    "10": "_8",
+    "11": "_9",
+    "12": "_10",
 }
 # Generate endpoints able to download
 
