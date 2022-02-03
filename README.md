@@ -1,3 +1,4 @@
+![Docker](https://github.com/dadosjusbr/coletor-mpba/actions/workflows/docker-publish.yml/badge.svg) 
 # Ministério Público do Estado da Bahia (MP-BA)
 
 Este crawler tem como objetivo a recuperação de informações sobre folhas de pagamentos
